@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1093342957316",
+    "firebase_url": "https://mathquizz-629be.firebaseio.com",
+    "project_id": "mathquizz-629be",
+    "storage_bucket": "mathquizz-629be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093342957316:android:9833ca50004b1cfcf90a51",
+        "android_client_info": {
+          "package_name": "feri.com.mathquizz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093342957316-7btis80cp04b4fha4rt60p9pv9d7vu88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "feri.com.mathquizz",
+            "certificate_hash": "dbf0033389d6fb58f0595dfc9b4323c377031169"
+          }
+        },
+        {
+          "client_id": "1093342957316-1afnbvo2bmbfnfiskte2m4j8rolfarjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbxX3nZfke0GpBjE2HkWltzI8aDBep8zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093342957316-1afnbvo2bmbfnfiskte2m4j8rolfarjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

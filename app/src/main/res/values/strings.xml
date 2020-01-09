@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MathQuizz</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TitleMenuHome">Home</string>
+    <string name="TitleMenuProfile">Profile</string>
+    <string name="materi1">Jarak Antara Dua Titik</string>
+    <string name="materi2">Jarak Antara Titik Ke Garis</string>
+    <string name="materi3">Jarak Antara Titik Ke Bidang</string>
+    <string name="materi4">Jarak Antara Dua Garis</string>
+    <string name="materi5">Jarak Antara Garis Ke Bidang</string>
+    <string name="materi6">Jarak Antara Dua Bidang</string>
+</resources>
