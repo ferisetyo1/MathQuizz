@@ -8,12 +8,17 @@ import kotlinx.android.parcel.Parcelize
 @IgnoreExtraProperties
 @Keep
 @Parcelize
-class JawabanModel(
-    var idSoal:String?=null,
-    var timestamp:Long?=0,
-    var jawaban:Int?=0
+class DynamicDataModel(
+
+    var id: String? = null,
+    var data: ArrayList<PembahasanModel> = ArrayList()
+
 ) : Parcelable {
+    constructor() : this("", ArrayList())
+
     override fun toString(): String {
-        return "JawabanModel(idSoal=$idSoal, jawaban=$jawaban)"
+        return "DynamicDataModel(id=$id, list=$data)"
     }
+
+
 }

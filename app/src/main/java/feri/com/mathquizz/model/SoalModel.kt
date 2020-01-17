@@ -10,14 +10,14 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 class SoalModel(
     var id: String? = null,
-    var tipe: String? = null,
+    var tipe: Int? = -1,
     var pertanyaan: String? = null,
     var jawaban_benar: Int? = null,
     var daftar_jawaban: ArrayList<String>,
     var pembahasan:ArrayList<PembahasanModel>
 ) : Parcelable {
 
-    constructor():this("","","",-1, ArrayList(), ArrayList())
+    constructor():this("",-1,"",-1, ArrayList(), ArrayList())
 
     override fun toString(): String {
         return "SoalModel(id=$id, tipe=$tipe, pertanyaan=$pertanyaan, jawaban_benar=$jawaban_benar, daftar_jawaban=$daftar_jawaban, pembahasan=$pembahasan)"

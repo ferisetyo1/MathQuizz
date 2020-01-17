@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".modul.NewUserActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kenalan dulu yuk!!"
+        android:textColor="@color/colorBlueLab"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Siapa nama panggilan Kamu?"
+        android:textColor="@color/colorBlueLab"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/input_nama"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:background="@drawable/outlinecorner"
+        android:ems="10"
+        android:hint="nama panggilan"
+        android:padding="8dp"
+        android:textColor="@color/colorBlueLab"
+        android:textColorHint="@color/colorSkyBlue3" />
+
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/solidcorner"
+        android:ems="10"
+        android:text="Simpan"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

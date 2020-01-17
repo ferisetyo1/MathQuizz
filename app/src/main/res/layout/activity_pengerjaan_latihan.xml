@@ -4,15 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modul.LatihanSoalActivity">
+    tools:context=".modul.PengerjaanLatihanActivity">
 
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
@@ -21,15 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_tipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/colorSkyBlue1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pertanyaan3"
@@ -107,34 +105,34 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jawaban "
-                        android:textColor="@color/colorSkyBlue1" />
+                        android:textColor="@color/colorBlueLab" />
 
                     <TextView
                         android:id="@+id/status_jawaban"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="salah"
-                        android:textColor="@color/colorSkyBlue1"
+                        android:textColor="@color/colorBlueLab"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyt_pembenaran"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jawaban yang benar adalah "
-                        android:textColor="@color/colorSkyBlue1" />
+                        android:textColor="@color/colorBlueLab" />
 
                     <TextView
                         android:id="@+id/jawaban_benar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="d"
-                        android:textColor="@color/colorSkyBlue1"
+                        android:textColor="@color/colorBlueLab"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -145,6 +143,12 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:background="@color/colorSkyBlue3" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_pembahasansoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
             </LinearLayout>
 
         </LinearLayout>
@@ -157,7 +161,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
-        android:tint="@color/colorSkyBlue1"
+        android:tint="@color/colorBlueLab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
@@ -168,11 +172,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Latihan Soal"
-        android:textColor="@color/colorSkyBlue1"
+        android:textColor="@color/colorBlueLab"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/outline"
+            android:text="Back"
+            android:textColor="@color/colorBlueLab"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlueLab"
+            android:text="Next"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

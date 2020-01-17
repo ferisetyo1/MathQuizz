@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modul.LatihanActivity">
+    tools:context=".modul.MateriActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Pilih Materi"
-        android:textColor="@color/colorSkyBlue1"
+        android:textColor="@color/colorBlueLab"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,27 +101,9 @@
         android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
         android:onClick="onClick"
-        android:tint="@color/colorSkyBlue1"
+        android:tint="@color/colorBlueLab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_panduan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:scaleType="centerInside"
-        android:tint="@android:color/white"
-        app:backgroundTint="@color/colorSkyBlue2"
-        app:fabSize="auto"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="36dp"
-        app:srcCompat="@drawable/ic_help_outline_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="colorBlueLab">#2D305B</color>
     <color name="colorSkyBlue1">#2699FB</color>
     <color name="colorSkyBlue2">#7FC4FD</color>
     <color name="colorSkyBlue3">#BCE0FD</color>

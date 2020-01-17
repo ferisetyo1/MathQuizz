@@ -13,16 +13,16 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import feri.com.mathquizz.R
-import feri.com.mathquizz.model.SoalModel
+import feri.com.mathquizz.model.DynamicDataModel
 
-class LatihanActivity : AppCompatActivity(), View.OnClickListener {
+class MateriActivity : AppCompatActivity(), View.OnClickListener {
 
     val db = FirebaseFirestore.getInstance()
-    val soalReff = db.collection("soal")
+    val materiReff = db.collection("materi")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_latihan)
+        setContentView(R.layout.activity_materi)
         supportActionBar?.hide()
     }
 
@@ -36,51 +36,51 @@ class LatihanActivity : AppCompatActivity(), View.OnClickListener {
         when (p0?.id) {
             R.id.btn_materi1 -> {
                 dialog.show()
-                showSoal(dialog, "materi1")
+                showSoal(dialog, "materi1",R.string.materi1)
             }
             R.id.btn_materi2 -> {
                 dialog.show()
-                showSoal(dialog, "materi2")
+                showSoal(dialog, "materi2",R.string.materi2)
             }
             R.id.btn_materi3 -> {
                 dialog.show()
-                showSoal(dialog, "materi3")
+                showSoal(dialog, "materi3",R.string.materi3)
             }
             R.id.btn_materi4 -> {
                 dialog.show()
-                showSoal(dialog, "materi4")
+                showSoal(dialog, "materi4",R.string.materi4)
             }
             R.id.btn_materi5 -> {
                 dialog.show()
-                showSoal(dialog, "materi5")
+                showSoal(dialog, "materi5",R.string.materi5)
             }
             R.id.btn_materi6 -> {
                 dialog.show()
-                showSoal(dialog, "materi6")
+                showSoal(dialog, "materi6",R.string.materi6)
             }
             R.id.btn_back -> {
                 finish()
             }
-            R.id.btn_panduan->{
-
-            }
         }
     }
 
-    private fun showSoal(dialog: AlertDialog?, s: String) {
-        soalReff.whereEqualTo("tipe",s).get().addOnSuccessListener {
+    private fun showSoal(dialog: AlertDialog?, s: String,resjudul:Int) {
+        materiReff.whereEqualTo("id", s).get().addOnSuccessListener {
             dialog?.dismiss()
             if (it.isEmpty) {
                 Log.d("TAG", "is empty");
-                Toast.makeText(this, "Soal masih belum tersedia", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Materi masih belum tersedia", Toast.LENGTH_LONG).show()
             } else {
-                val data = it.toObjects(SoalModel::class.java)
+                val data = it.toObjects(DynamicDataModel::class.java)
                 Log.d("TAG", "${data.get(0)}");
                 startActivity(
                     Intent(
                         this,
-                        LatihanSoalActivity::class.java
-                    ).putExtra("dataSoal", data.get(0))
+                        ActivityDynamicCustom::class.java
+                    )
+                        .putExtra("data", data.get(0))
+                        .putExtra("kategori", "Materi")
+                        .putExtra("judul",getString(resjudul))
                 )
             }
         }

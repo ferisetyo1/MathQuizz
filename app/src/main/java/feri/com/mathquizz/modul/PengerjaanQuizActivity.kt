@@ -9,26 +9,26 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.CompoundButton
 import androidx.core.content.ContextCompat
-import com.google.firebase.firestore.FirebaseFirestore
 import feri.com.mathquizz.model.JawabanModel
 import feri.com.mathquizz.R
 import feri.com.mathquizz.model.SoalModel
 import feri.com.mathquizz.util.Helpers
-import kotlinx.android.synthetic.main.activity_quiz.*
+import kotlinx.android.synthetic.main.activity_pengerjaan_quiz.*
 
-class QuizActivity : AppCompatActivity(), View.OnClickListener,
+class PengerjaanQuizActivity : AppCompatActivity(), View.OnClickListener,
     CompoundButton.OnCheckedChangeListener {
 
     var position = 0
     val listsoal = ArrayList<SoalModel>()
     val jawaban = ArrayList<JawabanModel>()
-    val db = FirebaseFirestore.getInstance()
-    val soalReff = db.collection("soal")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz)
+        setContentView(R.layout.activity_pengerjaan_quiz)
         supportActionBar?.hide()
+
+        val dataSoal = intent.getParcelableArrayListExtra<SoalModel>("dataSoal")
+        listsoal.addAll(dataSoal)
 
         progressline.max = listsoal.size
         progressline.progress = 1
@@ -43,16 +43,13 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener,
             it.text = Helpers.longtoDate(SystemClock.elapsedRealtime() - it.base)
         }
 
-        val dataSoal=intent.getParcelableArrayListExtra<SoalModel>("dataSoal")
-        listsoal.addAll(dataSoal)
-
         chronometer2.start()
 
         (0..listsoal.size - 1).forEach {
             jawaban.add(
                 JawabanModel(
                     listsoal.get(it).id,
-                    0
+                    0, 0
                 )
             )
         }
@@ -65,7 +62,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     fun updateSoal() {
-        pertanyaan.text = listsoal.get(position).pertanyaan
+        pertanyaan.text = listsoal.get(position).pertanyaan?.replace("<br>", "\n")
         jawaban_a.text = listsoal.get(position).daftar_jawaban.get(0)
         jawaban_b.text = listsoal.get(position).daftar_jawaban.get(1)
         jawaban_c.text = listsoal.get(position).daftar_jawaban.get(2)
@@ -103,6 +100,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener,
                 }
                 Log.d("position", "$position")
                 progressline.progress = position + 1
+                Log.d("progress", progressline.progress.toString())
                 updateSoal()
             }
             R.id.btn_submit -> {
@@ -110,6 +108,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener,
                     Intent(this, ResultActivity::class.java)
                         .putExtra("dataSoal", listsoal)
                         .putExtra("dataJawaban", jawaban)
+                        .putExtra("tipe", 2)
                         .putExtra("time", SystemClock.elapsedRealtime() - chronometer2.base)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 )
@@ -121,12 +120,12 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener,
 
         if (position == 0) {
             btn_back.setBackgroundResource(R.drawable.outlinecorner)
-            btn_back.setTextColor(ContextCompat.getColor(this, R.color.colorSkyBlue1))
+            btn_back.setTextColor(ContextCompat.getColor(this, R.color.colorBlueLab))
             btn_next.setBackgroundResource(R.drawable.solidcorner)
             btn_next.setTextColor(ContextCompat.getColor(this, android.R.color.white))
         } else if (position == listsoal.size - 1) {
             btn_next.setBackgroundResource(R.drawable.outlinecorner)
-            btn_next.setTextColor(ContextCompat.getColor(this, R.color.colorSkyBlue1))
+            btn_next.setTextColor(ContextCompat.getColor(this, R.color.colorBlueLab))
             btn_back.setBackgroundResource(R.drawable.solidcorner)
             btn_back.setTextColor(ContextCompat.getColor(this, android.R.color.white))
         } else {

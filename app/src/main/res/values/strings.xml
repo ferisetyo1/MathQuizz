@@ -11,4 +11,5 @@
     <string name="materi4">Jarak Antara Dua Garis</string>
     <string name="materi5">Jarak Antara Garis Ke Bidang</string>
     <string name="materi6">Jarak Antara Dua Bidang</string>
+    <string name="petunjuk_pengerjaan_soal">Sebelum mulai bacalah petunjuk berikut :\n1. Soal merupakan pilihan ganda\n2. Disini kamu dapat melihat apakah jawabanmu benar atau salah secara langsung dengan menekan tombol cek jawaban\n3. Selain memunculkan jawaban yang benar, kamu juga dapat melihat bagaimana pembahasan soalnya dengan menekan tombol tersebut</string>
 </resources>

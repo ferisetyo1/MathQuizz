@@ -11,17 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".modul.LatihanSoalActivity"></activity>
-        <activity android:name=".modul.LatihanActivity" />
-        <activity android:name=".modul.ResultActivity" />
-        <activity android:name=".modul.QuizActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".modul.ActivityDynamicCustom"></activity>
+        <activity android:name=".modul.MateriActivity" />
+        <activity android:name=".modul.GantiNamaActivity" />
+        <activity android:name=".modul.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".modul.NewUserActivity" />
+        <activity android:name=".modul.PengerjaanLatihanActivity" />
+        <activity android:name=".modul.ResultActivity" />
+        <activity android:name=".modul.PengerjaanQuizActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
