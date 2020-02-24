@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         tools:ignore="MissingConstraints" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
@@ -19,7 +20,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
@@ -29,48 +30,107 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/pertanyaan3"
+            <LinearLayout
+                android:id="@+id/pertanyaan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Apakah kamu tahu aku suka dia?"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:orientation="vertical" />
 
             <RadioGroup
                 android:id="@+id/jawaban_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/jawaban_a"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/jawaban_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    <RadioButton
+                        android:id="@+id/jawaban_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-                <RadioButton
-                    android:id="@+id/jawaban_c"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    <LinearLayout
+                        android:id="@+id/container_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/jawaban_d"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/jawaban_e"
+                    <RadioButton
+                        android:id="@+id/jawaban_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/container_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/jawaban_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/container_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/jawaban_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/container_d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/jawaban_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/container_e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
             </RadioGroup>
 
             <Button
@@ -119,7 +179,9 @@
                 <LinearLayout
                     android:id="@+id/lyt_pembenaran"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -127,13 +189,11 @@
                         android:text="Jawaban yang benar adalah "
                         android:textColor="@color/colorBlueLab" />
 
-                    <TextView
+                    <LinearLayout
                         android:id="@+id/jawaban_benar"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="d"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"></LinearLayout>
 
                 </LinearLayout>
 
@@ -151,6 +211,17 @@
                     android:orientation="vertical" />
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/motivasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="test"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -161,6 +232,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
+        android:onClick="back"
         android:tint="@color/colorBlueLab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -179,34 +251,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <Button
+        android:id="@+id/btn_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@color/colorBlueLab"
+        android:text="Next"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/outline"
-            android:text="Back"
-            android:textColor="@color/colorBlueLab"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorBlueLab"
-            android:text="Next"
-            android:textColor="@android:color/white" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

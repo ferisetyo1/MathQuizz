@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modul.MateriPrasyaratActivity">
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Materi Prasyarat"
+        android:textColor="@color/colorBlueLab"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="back"
+        android:background="@android:color/transparent"
+        android:tint="@color/colorBlueLab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittle">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Catatan Materi Prasyarat"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. Garis dikatakan terletak pada bidang jika garis dan bidang sekurang-kurangnya mempunyai dua titik persekutuan"
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="2. Garis dikatakan sejajar bidang, jika garis dan bidang tidak mempunyai titik persekutuan."
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3. Garis menembus bidang, jika garis dan bidang hanya mempunyai sebuah titik persekutuan"
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="4. Sebuah garis tegak pada sebuah lurus bidang jika garis itu tegak lurus pada semua garis yang terletak pada bidang tersebut"
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="5. Dua bidang ɑ dan ᵦ dikatakan berimpit jika titik yang terletak pada bidang ᵦ juga terletak pada bidang ɑ, atau setiap titik pada bidang ᵦ juga terletak pada bidang ɑ."
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="6. Dua bidang dikatakan sejajar jika kedua bidang tersebut tidak mempunyai titik persekutuan."
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="7. Dua bidang dikatakan berpotongan jika kedua bidang itu tepat memiliki sebuah garis persekutuan."
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="8. Rumus Pythagoras dan luas pada segitiga siku-siku yaitu"
+                android:textColor="@color/colorBlueLab" />
+
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/segitiga" />
+
+            <io.github.kexanie.library.MathView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:text="@string/rumus_segitiga" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="9. Terdapat 6 bagian pada suatu kubus yaitu :\n\t\t\ta. rusuk\n\t\t\tb. sisi\n\t\t\tc. titik sudut\n\t\t\td. bidang diagonal\n\t\t\te. diagonal ruang\n\t\t\tf. diagonal sisi"
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\t\t\t...lihat selengkapnya"
+                android:onClick="lihatKubus"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="10. Apabila diketahui rusuk suatu kubus yaitu a maka panjang digonal bidangnya yaitu a√2, dan panjang diagonal bidangnya yaitu a√3"
+                android:textColor="@color/colorBlueLab"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

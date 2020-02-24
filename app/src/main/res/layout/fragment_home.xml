@@ -6,19 +6,123 @@
     android:layout_height="match_parent"
     tools:context=".modul.HomeFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="TODO"
+                        app:srcCompat="@drawable/logo" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_margin="8dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="15dp"
+                        android:src="@drawable/logo_unisma" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="20"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/judul_penelitian"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlueLab"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btn_materi_pra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/solidcorner"
+                    android:ems="20"
+                    android:text="Materi Prasyarat"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_materi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/solidcorner"
+                    android:ems="20"
+                    android:text="Materi Bangun Ruang"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_latihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/solidcorner"
+                    android:ems="20"
+                    android:text="Mulai Latihan"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/solidcorner"
+                    android:ems="20"
+                    android:text="Mulai Quizz"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="32dp"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp">
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -31,10 +135,10 @@
                 android:id="@+id/nama_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLength="20"
                 android:text="anonymous"
                 android:textColor="@color/colorBlueLab"
                 android:textSize="24sp"
-                android:maxLength="20"
                 android:textStyle="bold" />
 
             <ImageButton
@@ -43,78 +147,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
-                android:tint="@color/colorBlueLab"
                 android:elevation="10dp"
+                android:tint="@color/colorBlueLab"
                 app:srcCompat="@drawable/ic_edit_black_24dp" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:srcCompat="@drawable/logo"
-                android:tint="@color/colorBlueLab"
-                android:contentDescription="TODO" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Math Quizz"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlueLab"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="64dp"
-                android:text="Silahkan pelajari materi dengan menekan tombol mulai latihan dan memulai quiz dengan menekan tombol mulai quiz"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlueLab"
-                android:textSize="18sp"
-                android:textStyle="italic" />
-
-            <Button
-                android:id="@+id/btn_materi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/solidcorner"
-                android:text="Baca Materi"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_latihan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/solidcorner"
-                android:text="Mulai Latihan"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btn_quiz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/solidcorner"
-                android:text="Mulai Quizz"
-                android:textColor="@android:color/white" />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

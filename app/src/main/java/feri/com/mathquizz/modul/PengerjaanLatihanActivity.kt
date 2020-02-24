@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
 import android.view.View
-import android.widget.Chronometer
-import android.widget.TextView
+import android.widget.RadioButton
 import android.widget.Toast
-import com.bumptech.glide.Glide
+import com.google.gson.JsonArray
 import feri.com.mathquizz.R
 import feri.com.mathquizz.model.JawabanModel
 import feri.com.mathquizz.model.SoalModel
@@ -23,8 +22,9 @@ import kotlinx.android.synthetic.main.activity_pengerjaan_latihan.jawaban_d
 import kotlinx.android.synthetic.main.activity_pengerjaan_latihan.jawaban_e
 import kotlinx.android.synthetic.main.activity_pengerjaan_latihan.jawaban_group
 
-class PengerjaanLatihanActivity : AppCompatActivity() {
+class PengerjaanLatihanActivity : AppCompatActivity(), View.OnClickListener {
 
+    private lateinit var activeRadioButton: RadioButton
     var position = 0
     val listsoal = ArrayList<SoalModel>()
     val jawaban = ArrayList<JawabanModel>()
@@ -34,25 +34,31 @@ class PengerjaanLatihanActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pengerjaan_latihan)
         supportActionBar?.hide()
 
+        jawaban_a.setOnClickListener(this)
+        jawaban_b.setOnClickListener(this)
+        jawaban_c.setOnClickListener(this)
+        jawaban_d.setOnClickListener(this)
+        jawaban_e.setOnClickListener(this)
+
         val dataSoal = intent.getParcelableArrayListExtra<SoalModel>("dataSoal")
         listsoal.addAll(dataSoal)
-        Log.d("Latihan list soal", listsoal.toString())
 
         updateSoal()
 
         btn_cek.setOnClickListener {
             chronometer.stop()
-            if (jawaban_group.checkedRadioButtonId == -1) {
+            if (activeRadioButton.id == -1) {
                 Toast.makeText(this, "pilih jawaban terlebih dahulu", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
             lyt_pembahasan.visibility = View.VISIBLE
-            status_jawaban?.text = when (jawaban_group.checkedRadioButtonId) {
+            status_jawaban?.text = when (activeRadioButton.id) {
                 R.id.jawaban_a -> cekJawaban(1)
                 R.id.jawaban_b -> cekJawaban(2)
                 R.id.jawaban_c -> cekJawaban(3)
                 R.id.jawaban_d -> cekJawaban(4)
-                else -> cekJawaban(5)
+                R.id.jawaban_e -> cekJawaban(5)
+                else -> cekJawaban(0)
             }
         }
 
@@ -92,38 +98,27 @@ class PengerjaanLatihanActivity : AppCompatActivity() {
     }
 
     private fun updateSoal() {
+        activeRadioButton = RadioButton(this)
         chronometer.setBase(SystemClock.elapsedRealtime());
         chronometer.start()
         val dataSoal = listsoal.get(position);
         lyt_pembahasan.visibility = View.GONE
         lyt_pembahasansoal.removeAllViews()
-        pertanyaan3.text = dataSoal.pertanyaan
-        jawaban_a.text = dataSoal.daftar_jawaban.get(0)
-        jawaban_b.text = dataSoal.daftar_jawaban.get(1)
-        jawaban_c.text = dataSoal.daftar_jawaban.get(2)
-        jawaban_d.text = dataSoal.daftar_jawaban.get(3)
-        jawaban_e.text = dataSoal.daftar_jawaban.get(4)
-        jawaban_benar?.text = dataSoal.daftar_jawaban.get(dataSoal.jawaban_benar!! - 1)
-        dataSoal.pembahasan.forEach {
-            when (it.tipe) {
-                0 -> {
-                    lyt_pembahasansoal.addView(
-                        Helpers.generateTextView(
-                            this,
-                            it.data!!.replace("<br>", "\n")
-                        )
-                    )
-                }
-                1 -> {
-                    val iv = Helpers.generateImageView(this)
-                    Glide.with(this)
-                        .load(it.data)
-                        .error(R.drawable.ic_image_black_24dp)
-                        .into(iv)
-                    lyt_pembahasansoal.addView(iv)
-                }
-            }
-        }
+        clearContainer()
+        Helpers.textselection(this, dataSoal.pertanyaan, pertanyaan)
+        Helpers.textselection(this, dataSoal.daftar_jawaban.get(0), container_a)
+        Helpers.textselection(this, dataSoal.daftar_jawaban.get(1), container_b)
+        Helpers.textselection(this, dataSoal.daftar_jawaban.get(2), container_c)
+        Helpers.textselection(this, dataSoal.daftar_jawaban.get(3), container_d)
+        Helpers.textselection(this, dataSoal.daftar_jawaban.get(4), container_e)
+        Helpers.textselection(
+            this,
+            dataSoal.daftar_jawaban.get(dataSoal.jawaban_benar!! - 1),
+            jawaban_benar
+        )
+        Helpers.textselection(this, dataSoal.pembahasan, lyt_pembahasansoal)
+        motivasi.text = dataSoal.motivasi
+        setchecked(false, false, false, false, false)
         jawaban_group.clearCheck()
     }
 
@@ -140,4 +135,52 @@ class PengerjaanLatihanActivity : AppCompatActivity() {
             return "salah"
         }
     }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.jawaban_a -> {
+                activeRadioButton = p0 as RadioButton
+                setchecked(true, false, false, false, false)
+            }
+            R.id.jawaban_b -> {
+                activeRadioButton = p0 as RadioButton
+                setchecked(false, true, false, false, false)
+            }
+            R.id.jawaban_c -> {
+                activeRadioButton = p0 as RadioButton
+                setchecked(false, false, true, false, false)
+            }
+            R.id.jawaban_d -> {
+                activeRadioButton = p0 as RadioButton
+                setchecked(false, false, false, true, false)
+            }
+            R.id.jawaban_e -> {
+                activeRadioButton = p0 as RadioButton
+                setchecked(false, false, false, false, true)
+            }
+        }
+    }
+
+    private fun setchecked(b: Boolean, b1: Boolean, b2: Boolean, b3: Boolean, b4: Boolean) {
+        jawaban_a.isChecked = b
+        jawaban_b.isChecked = b1
+        jawaban_c.isChecked = b2
+        jawaban_d.isChecked = b3
+        jawaban_e.isChecked = b4
+    }
+
+    private fun clearContainer() {
+        pertanyaan.removeAllViews()
+        container_a.removeAllViews()
+        container_b.removeAllViews()
+        container_c.removeAllViews()
+        container_d.removeAllViews()
+        container_e.removeAllViews()
+        jawaban_benar.removeAllViews()
+    }
+
+    fun back(view: View) {
+        finish()
+    }
+
 }

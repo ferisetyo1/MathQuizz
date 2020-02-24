@@ -11,14 +11,13 @@ import kotlinx.android.parcel.Parcelize
 class DynamicDataModel(
 
     var id: String? = null,
-    var data: ArrayList<PembahasanModel> = ArrayList()
+    var data: String? = null
 
 ) : Parcelable {
-    constructor() : this("", ArrayList())
+    constructor() : this("", "")
 
     override fun toString(): String {
-        return "DynamicDataModel(id=$id, list=$data)"
+        return "DynamicDataModel(id=$id, data=$data)"
     }
-
-
+    
 }

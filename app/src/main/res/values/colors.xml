@@ -9,4 +9,6 @@
     <color name="colorSkyBlue2">#7FC4FD</color>
     <color name="colorSkyBlue3">#BCE0FD</color>
     <color name="colorSkyBlue4">#F1F9FF</color>
+
+    <color name="colorYellowLab">#F0BA19</color>
 </resources>

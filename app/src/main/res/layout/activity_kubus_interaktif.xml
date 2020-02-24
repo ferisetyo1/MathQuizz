@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modul.KubusInteraktifActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onClick"
+        android:text="Materi"
+        android:textColor="@color/colorBlueLab"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Bagian-Bagian Kubus"
+        android:textColor="@color/colorBlueLab"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/img_kubus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:srcCompat="@drawable/kubus" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_kubus">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. Rusuk"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rusuk_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:useDefaultMargins="true">
+
+
+                <Button
+                    android:id="@+id/ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="AD"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="AB"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="BC"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/dc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="DC"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="EF"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/fg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="Fg"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/hg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="HG"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/eh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="EH"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ae"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="AE"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="BF"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/cg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="CG"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/dh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="DH"
+                    android:textColor="@android:color/white" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/bidang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="2. Bidang/Sisi"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bidang_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bidang_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:useDefaultMargins="true">
+
+
+                <Button
+                    android:id="@+id/abfe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="abfe"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/adhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="adhe"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/efgh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="efgh"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/abcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="abcd"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/dcgh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="dcgh"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bfgc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="bfgc"
+                    android:textColor="@android:color/white" />
+
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/titiksudut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3. Titik Sudut"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titiksudut_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titik_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <TextView
+                android:id="@+id/bidangdiagonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="4. Bidang Diagonal"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bidangdiagonal_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bidangdiagonal_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:useDefaultMargins="true">
+
+
+                <Button
+                    android:id="@+id/dbfh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="dbfh"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ehcb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ehcb"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/adgf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="adgf"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/efcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="efcd"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/aegc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="aegc"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/abgh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="abgh"
+                    android:textColor="@android:color/white" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/diagonalruang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="5. Diagonal Ruang"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/diagonalruang_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/diagonalruang_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:useDefaultMargins="true">
+
+
+                <Button
+                    android:id="@+id/df"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="df"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ag"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ec"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="bh"
+                    android:textColor="@android:color/white" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/diagonalsisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="6. Diagonal Sisi/Diagonal Bidang"
+                android:textColor="@color/colorBlueLab"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/diagonalsisi_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/diagonalsisi_exp"
+                android:textColor="@color/colorBlueLab" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:useDefaultMargins="true">
+
+
+                <Button
+                    android:id="@+id/eb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="eb"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/cf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="cf"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="bg"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/gd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="gd"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ed"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ha"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/db"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="db"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/hf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="hf"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/eg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="eg"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/af"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="af"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="ac"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/hc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidcorner"
+                    android:onClick="onClick"
+                    android:text="hc"
+                    android:textColor="@android:color/white" />
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

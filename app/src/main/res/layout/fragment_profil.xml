@@ -26,291 +26,307 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabView"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:tabIndicatorColor="@color/colorYellowLab"
+            app:tabSelectedTextColor="@color/colorBlueLab">
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Penyusun" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Petunjuk" />-->
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView4">
+            app:layout_constraintTop_toBottomOf="@+id/tabView">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:orientation="vertical">
+        </androidx.viewpager.widget.ViewPager>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+        <!--        <ScrollView-->
+        <!--            android:id="@+id/scrollView3"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginStart="32dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginEnd="32dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView4">-->
 
-                    <com.mikhaellopez.circularimageview.CircularImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/foto_profil"
-                        app:civ_border_color="@color/colorBlueLab"
-                        app:civ_border_width="4dp"
-                        app:civ_shadow="true"
-                        app:civ_shadow_color="@color/colorSkyBlue3"
-                        app:civ_shadow_radius="10" />
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical">-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:orientation="vertical">
+        <!--                <TextView-->
+        <!--                    android:id="@+id/textView21"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Tim Penyusun"-->
+        <!--                    android:textColor="@color/colorBlueLab"-->
+        <!--                    android:textSize="16sp"-->
+        <!--                    android:textStyle="bold" />-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Nama"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab"
-                            android:textStyle="bold" />
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Yuli Ismi Nahdiyati Ilmi"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab" />
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:orientation="horizontal">-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Alamat"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab"
-                            android:textStyle="bold" />
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/foto_profil1"-->
+        <!--                            android:layout_width="75dp"-->
+        <!--                            android:layout_height="75dp"-->
+        <!--                            android:scaleType="centerCrop"-->
+        <!--                            android:src="@drawable/foto_profil" />-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Jl. Venus No. 14 Malang"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab" />
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginStart="8dp"-->
+        <!--                            android:orientation="vertical">-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Email"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab"
-                            android:textStyle="bold" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Feri Setyo Efendi"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="yuli.ismi069@yahoo.co.id"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Teknik Informatika-Univ. Brawijaya"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="mrs_yuliismi@outlook.co.id"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="ferisetyo1@gmail.com"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                        <TextView
-                            android:id="@+id/more"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="...selengkapnya"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/colorBlueLab"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Lihat Selengkapnya..."-->
+        <!--                                android:textAlignment="textEnd"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
 
-                </LinearLayout>
+        <!--                    </LinearLayout>-->
 
-                <LinearLayout
-                    android:id="@+id/profil_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Tempat/Tgl. Lahir"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/foto_profil2"-->
+        <!--                            android:layout_width="75dp"-->
+        <!--                            android:layout_height="75dp"-->
+        <!--                            android:scaleType="centerCrop"-->
+        <!--                            android:src="@drawable/foto_profil" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Malang, 16 Juli 1991"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginStart="8dp"-->
+        <!--                            android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Agama"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Feri Setyo Efendi"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Islam"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Teknik Informatika-Univ. Brawijaya"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Jurusan/Fakultas"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="ferisetyo1@gmail.com"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Matematika/Keguruan Ilmu Pendidikan"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Lihat Selengkapnya..."-->
+        <!--                                android:textAlignment="textEnd"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Pengalaman Organisasi"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+        <!--                    </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Anggota Departemen Pendidikan Matematika, periode 2010-2011"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Panitia Pelaksana Seminar Nasional tahun 2010"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/foto_profil3"-->
+        <!--                            android:layout_width="75dp"-->
+        <!--                            android:layout_height="75dp"-->
+        <!--                            android:scaleType="centerCrop"-->
+        <!--                            android:src="@drawable/foto_profil" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Panitia Pelaksana sebagai Bendahara Training"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginStart="8dp"-->
+        <!--                            android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mathematic Organization tahun 2010"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Feri Setyo Efendi"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Panitian Pelaksana sebagai Bendahara Pekan Mahasiswa Matematika tahun 2010"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Teknik Informatika-Univ. Brawijaya"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Panitian Pelaksana Paket Hari Ilmiah Olimpiade Matematika se-Jawa Timur tahun 2010"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="ferisetyo1@gmail.com"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Moto Hidup"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Lihat Selengkapnya..."-->
+        <!--                                android:textAlignment="textEnd"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Perbanyaklah bersyukur dan bersabar, maka Allah akan menyayangimu"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                    </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Berkerja keraslah untuk mendapatkan sesuatu yang diinginkan"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Jangan menunda pekerjaanmu sampai besok selama kamu dapat mengerjakannya sekarang"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorBlueLab" />
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/foto_profil4"-->
+        <!--                            android:layout_width="75dp"-->
+        <!--                            android:layout_height="75dp"-->
+        <!--                            android:scaleType="centerCrop"-->
+        <!--                            android:src="@drawable/foto_profil" />-->
 
-                    <TextView
-                        android:id="@+id/less"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="...sembunyikan"
-                        android:textAlignment="viewEnd"
-                        android:textColor="@color/colorBlueLab"
-                        android:textStyle="bold" />
-                </LinearLayout>
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginStart="8dp"-->
+        <!--                            android:orientation="vertical">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:orientation="vertical">
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Feri Setyo Efendi"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
 
-                    <Button
-                        android:id="@+id/btn_pengantar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/solidcorner"
-                        android:text="Pengantar"
-                        android:textColor="@android:color/white" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Teknik Informatika-Univ. Brawijaya"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <Button
-                        android:id="@+id/btn_motivasi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/solidcorner"
-                        android:text="Motivasi"
-                        android:textColor="@android:color/white" />
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="ferisetyo1@gmail.com"-->
+        <!--                                android:textColor="@color/colorBlueLab" />-->
 
-                    <Button
-                        android:id="@+id/btn_petunjuk"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/solidcorner"
-                        android:text="Petunjuk"
-                        android:textColor="@android:color/white" />
-                </LinearLayout>
+        <!--                            <TextView-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="Lihat Selengkapnya..."-->
+        <!--                                android:textAlignment="textEnd"-->
+        <!--                                android:textColor="@color/colorBlueLab"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
 
-            </LinearLayout>
-        </ScrollView>
+        <!--                    </LinearLayout>-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                <View-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="1dp"-->
+        <!--                    android:layout_marginTop="8dp"-->
+        <!--                    android:layout_marginBottom="8dp"-->
+        <!--                    android:background="#eaeaea" />-->
+
+        <!--                <TextView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Deskripsi Aplikasi"-->
+        <!--                    android:textColor="@color/colorBlueLab"-->
+        <!--                    android:textSize="16sp"-->
+        <!--                    android:textStyle="bold" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/imageView"-->
+        <!--                    android:layout_width="200dp"-->
+        <!--                    android:layout_height="200dp"-->
+        <!--                    android:layout_gravity="center_horizontal"-->
+        <!--                    android:contentDescription="TODO"-->
+        <!--                    app:srcCompat="@drawable/logo" />-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/textView"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:ems="20"-->
+        <!--                    android:text="@string/judul_penelitian"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/colorBlueLab"-->
+        <!--                    android:textSize="18sp"-->
+        <!--                    android:textStyle="italic" />-->
+        <!--            </LinearLayout>-->
+        <!--        </ScrollView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

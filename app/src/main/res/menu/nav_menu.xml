@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/kompetensiFragment"
+        android:icon="@drawable/ic_import_contacts_black_24dp"
+        android:title="@string/TitleMenuKomptensi" />
+
+    <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/TitleMenuHome" />

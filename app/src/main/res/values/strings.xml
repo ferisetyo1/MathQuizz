@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MathQuizz</string>
+    <string name="app_name">D3-D</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -12,4 +12,14 @@
     <string name="materi5">Jarak Antara Garis Ke Bidang</string>
     <string name="materi6">Jarak Antara Dua Bidang</string>
     <string name="petunjuk_pengerjaan_soal">Sebelum mulai bacalah petunjuk berikut :\n1. Soal merupakan pilihan ganda\n2. Disini kamu dapat melihat apakah jawabanmu benar atau salah secara langsung dengan menekan tombol cek jawaban\n3. Selain memunculkan jawaban yang benar, kamu juga dapat melihat bagaimana pembahasan soalnya dengan menekan tombol tersebut</string>
+    <string name="judul_penelitian">MEDIA PEMBELAJARAN INTERAKTIF BERKARAKTER ISLAMI PADA MATERI DIMENSI TIGA</string>
+    <string name="TitleMenuKomptensi">Kompetensi</string>
+    <string name="rusuk_exp">Kubus diatas memiliki 12 rusuk, yaitu:</string>
+    <string name="bidang_exp">Kubus diatas memiliki 6 bidang/sisi, yaitu:</string>
+    <string name="titik_exp">Kubus diatas memiliki 8 titik sudut, yaitu: A, B, C, D, E, F, G, H</string>
+    <string name="bidangdiagonal_exp">Kubus diatas memiliki 6 bidang diagonal, yaitu:</string>
+    <string name="diagonalruang_exp">Kubus diatas memiliki 4 diagonal ruang, yaitu:</string>
+    <string name="diagonalsisi_exp">Setiap bidang sisi pada kubus memiliki 2 diagonal sisi, sehingga kubus diatas memiliki 12 diagonal sisi, yaitu:</string>
+    <string name="rumus_segitiga">$$ \\scriptsize c^2=a^2+b^2$$ $$\\scriptsize Luas\\,segitiga=\\frac{a \\times b}{2}=\\frac{c \\times cC}{2}$$</string>
+    <string name="doa_setelah_belajar">اللَّحُمَّ صَلِّ عَلىَ سَيِّدِ ناَ مُحَمَّدٍ وَعَلَى آلِ سَيِّدِ ناَ مُحَمَّدٍ وَالْحَمْدُلِلّٰهِ رَبِّ الْعَالَمِيْنَ. رَبَّنَانْفَعْنَابِمَاعَلَمْتَنَا * رَبِّ عَلِّمْنَاالَّذِيْ يَنْفَعُنَا رَبِّ فَقِّهْنَاوَفَقِّهْ أَهْلَنَا * وَقَرَ بَةًلَّنَافِي دِيْنِنَا رَبَّنَازِدْنَاعِلْمًانَافِعًا * وَارْزُقٔ لَنَاحَلَالَاطَيِّبًا وَافْتَحْ لَنَافُتُوْحًاحِكْمَةً * يَسِّرْلَنَاكُلَّ أُمُوْ رِنَا وَاغْفِرْ لَنَاجَمِيْعَاالْخَطَايَ * وَأرْضَ عَنَّاكُلَّ أَحْوَالِنَا وَبَارِكْ لَنَافِيْمَاأَعْطَيْتَ * وَاخْتِمْ لَنَاحُسْنَ الْخَاتِمَةِ سُبْحَانَكَ الَّهُمَّ وَبِحَمْدِكَ أَشْهَدُأَنْ لاَاِلَهَ اِلَّاأَنْتَ أَسْتَغْفِرُكَ وَأَتُوْ بُ أِلَيْكَ</string>
 </resources>

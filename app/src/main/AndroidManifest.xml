@@ -3,29 +3,52 @@
     package="feri.com.mathquizz">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon_aplikasi"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon_aplikasi"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".modul.ActivityDynamicCustom"></activity>
-        <activity android:name=".modul.MateriActivity" />
-        <activity android:name=".modul.GantiNamaActivity" />
-        <activity android:name=".modul.SplashActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".modul.MateriPrasyaratActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.ResultPrasyarat"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.PengerjaanPrasyaratActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.KubusInteraktifActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.PetaKonsepActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.PengerjaanQuizzActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.ActivityDynamicCustom"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.MateriActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.GantiNamaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".modul.NewUserActivity" />
-        <activity android:name=".modul.PengerjaanLatihanActivity" />
-        <activity android:name=".modul.ResultActivity" />
-        <activity android:name=".modul.PengerjaanQuizActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".modul.NewUserActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.PengerjaanLatihanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modul.ResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

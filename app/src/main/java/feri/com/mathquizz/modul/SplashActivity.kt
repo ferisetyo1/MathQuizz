@@ -10,10 +10,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.google.firebase.auth.FirebaseAuth
 import feri.com.mathquizz.MainActivity
 import feri.com.mathquizz.R
 import feri.com.mathquizz.shared.SPManager
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
@@ -25,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.hide()
 
-        if (mAuth.currentUser==null){
+        if (mAuth.currentUser == null) {
             val builderdialog = AlertDialog.Builder(this)
             builderdialog.setCancelable(false)
             val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -47,7 +51,7 @@ class SplashActivity : AppCompatActivity() {
                             .show()
                     }
                 }
-        }else{
+        } else {
             redirect()
         }
     }

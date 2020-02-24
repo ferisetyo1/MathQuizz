@@ -34,6 +34,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <Button
+            android:id="@+id/btn_bagiankubus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/solidcorner"
+            android:onClick="onClick"
+            android:text="Bagian-Bagian Kubus"
+            android:textColor="@android:color/white" />
+
+        <Button
             android:id="@+id/btn_materi1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

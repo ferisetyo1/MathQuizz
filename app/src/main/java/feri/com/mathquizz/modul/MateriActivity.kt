@@ -34,6 +34,9 @@ class MateriActivity : AppCompatActivity(), View.OnClickListener {
         val dialog = builderdialog.create()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         when (p0?.id) {
+            R.id.btn_bagiankubus->{
+                startActivity(Intent(this,KubusInteraktifActivity::class.java))
+            }
             R.id.btn_materi1 -> {
                 dialog.show()
                 showSoal(dialog, "materi1",R.string.materi1)

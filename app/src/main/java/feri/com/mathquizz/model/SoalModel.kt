@@ -14,13 +14,14 @@ class SoalModel(
     var pertanyaan: String? = null,
     var jawaban_benar: Int? = null,
     var daftar_jawaban: ArrayList<String>,
-    var pembahasan:ArrayList<PembahasanModel>
+    var pembahasan: String? = null,
+    var motivasi: String? = null
 ) : Parcelable {
 
-    constructor():this("",-1,"",-1, ArrayList(), ArrayList())
+    constructor() : this("", -1, "", -1, ArrayList(), "", "")
 
     override fun toString(): String {
-        return "SoalModel(id=$id, tipe=$tipe, pertanyaan=$pertanyaan, jawaban_benar=$jawaban_benar, daftar_jawaban=$daftar_jawaban, pembahasan=$pembahasan)"
+        return "SoalModel(id=$id, tipe=$tipe, pertanyaan=$pertanyaan, jawaban_benar=$jawaban_benar, daftar_jawaban=$daftar_jawaban, pembahasan=$pembahasan, motivasi=$motivasi)"
     }
 
 }

@@ -14,6 +14,6 @@ class JawabanModel(
     var jawaban:Int?=0
 ) : Parcelable {
     override fun toString(): String {
-        return "JawabanModel(idSoal=$idSoal, jawaban=$jawaban)"
+        return "JawabanModel(idSoal=$idSoal, timestamp=$timestamp, jawaban=$jawaban)"
     }
 }

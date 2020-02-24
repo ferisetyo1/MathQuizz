@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_profilFragment"
             app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kompetensiFragment"
+            app:destination="@id/kompetensiFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilFragment"
         android:name="feri.com.mathquizz.modul.ProfilFragment"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/kompetensiFragment"
+        android:name="feri.com.mathquizz.modul.KompetensiFragment"
+        android:label="fragment_kompetensi"
+        tools:layout="@layout/fragment_kompetensi" />
 </navigation>
